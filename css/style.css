@@ -1,0 +1,132 @@
+header {
+  background-color: black;
+  width: 100%;
+  height: 970px;
+}
+header .nav-header {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+header .nav-header .a-nav {
+  color: #008d00;
+}
+header .section-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 920px;
+  overflow: hidden;
+}
+header .section-header h1 {
+  padding: 0 0 0 0;
+  font-size: 250px;
+  color: aliceblue;
+  position: absolute;
+}
+header .section-header .video-header {
+  width: 700px;
+  padding: 0 0 0 800px;
+}
+header .div-header {
+  display: flex;
+  justify-content: end;
+}
+header .div-header .p-header {
+  color: #008d00;
+  font-size: 10px;
+}
+
+.momentos {
+  height: 970px;
+  background-color: rgb(12, 12, 12);
+}
+.momentos .contenedor-momentos {
+  width: 1200px;
+  border: 2px solid rgb(52, 50, 50);
+}
+.momentos .contenedor-momentos .centrar-h2 {
+  display: flex;
+  justify-content: end;
+}
+.momentos .contenedor-momentos .centrar-h2 .h2-momentos {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+}
+.momentos .contenedor-momentos .centrar-h2 .h2-momentos h2 {
+  font-size: 80px;
+  color: aliceblue;
+  text-shadow: 8px 8px black;
+}
+.momentos .contenedor-video {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  perspective: 1000px;
+}
+.momentos .contenedor-video .bloque-momentos {
+  width: 300px;
+  height: 350px;
+  text-align: center;
+  margin: 30px;
+  border: 2px solid rgb(52, 50, 50);
+  -webkit-box-shadow: -8px 6px 7px 0px rgba(0, 0, 0, 0.76);
+  -moz-box-shadow: -8px 6px 7px 0px rgba(0, 0, 0, 0.76);
+  box-shadow: -8px 6px 7px 0px rgba(0, 0, 0, 0.76);
+  transform-style: preserve-3d;
+}
+.momentos .contenedor-video .bloque-momentos:hover {
+  scale: 1.1;
+  transition: all 300ms ease-in-out;
+}
+.momentos .contenedor-video .bloque-momentos .video-momentos {
+  width: 300px;
+  height: 250px;
+  object-fit: cover;
+}
+.momentos .contenedor-video .bloque-momentos .p-momentos {
+  color: aliceblue;
+}
+.momentos .contenedor-video .h3 {
+  display: flex;
+  justify-content: end;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main .fondo-main {
+  background-image: url(../img/neo/p1cb.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  height: 970px;
+}
+main .fondo-main .nav-main {
+  display: flex;
+  justify-content: end;
+}
+main .fondo-main .nav-main .a-main {
+  color: rgb(235, 238, 241);
+  margin: 10px;
+  text-decoration: none;
+  /* backdrop-filter: blur(2rem); */
+}
+main .neo-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .neo-main .img-neo {
+  padding: 150px 0 0 0;
+  width: 900px;
+  height: 650px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,52 @@
+$color-tipografia: #008d00;
+
+header {
+    
+    background-color: black;
+    width: 100%;
+    height: 970px;
+  
+
+    .nav-header {
+        background-color: black;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        .a-nav {
+            color: $color-tipografia;
+        }
+    }
+
+    .section-header {
+       display: flex;
+        justify-content: center;
+        align-items: center; 
+        height: 920px;
+        overflow: hidden; 
+        
+
+        h1 {
+            padding: 0 0 0 0;
+            font-size: 250px;
+            color: aliceblue;
+             position: absolute; 
+        }
+        .video-header{
+         width: 700px;
+         
+         padding: 0 0 0 800px;
+         
+        }
+
+    }
+    .div-header{
+        display: flex;
+        justify-content: end;
+
+    .p-header {
+        color: $color-tipografia;
+        font-size: 10px;
+    }
+}
+}
