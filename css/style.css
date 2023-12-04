@@ -38,36 +38,40 @@ header .div-header .p-header {
   font-size: 10px;
 }
 
-.momentos {
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+.main .momentos {
+  width: 100%;
   height: 970px;
   background-color: rgb(12, 12, 12);
 }
-.momentos .contenedor-momentos {
-  width: 1200px;
+.main .momentos .contenedor-momentos {
+  /* width: 1200px; */
   border: 2px solid rgb(52, 50, 50);
 }
-.momentos .contenedor-momentos .centrar-h2 {
-  display: flex;
-  justify-content: end;
-}
-.momentos .contenedor-momentos .centrar-h2 .h2-momentos {
+.main .momentos .contenedor-momentos .centrar-h2 .h2-momentos {
   display: flex;
   align-items: center;
   width: 500px;
   height: 500px;
 }
-.momentos .contenedor-momentos .centrar-h2 .h2-momentos h2 {
+.main .momentos .contenedor-momentos .centrar-h2 .h2-momentos .img-momentos {
+  width: 450px;
+}
+.main .momentos .contenedor-momentos .centrar-h2 .h2-momentos h2 {
   font-size: 80px;
   color: aliceblue;
   text-shadow: 8px 8px black;
 }
-.momentos .contenedor-video {
+.main .momentos .contenedor-video {
   display: flex;
   flex-direction: row;
   justify-content: end;
   perspective: 1000px;
 }
-.momentos .contenedor-video .bloque-momentos {
+.main .momentos .contenedor-video .bloque-momentos {
   width: 300px;
   height: 350px;
   text-align: center;
@@ -78,21 +82,33 @@ header .div-header .p-header {
   box-shadow: -8px 6px 7px 0px rgba(0, 0, 0, 0.76);
   transform-style: preserve-3d;
 }
-.momentos .contenedor-video .bloque-momentos:hover {
+.main .momentos .contenedor-video .bloque-momentos:hover {
   scale: 1.1;
   transition: all 300ms ease-in-out;
 }
-.momentos .contenedor-video .bloque-momentos .video-momentos {
+.main .momentos .contenedor-video .bloque-momentos .video-momentos {
   width: 300px;
   height: 250px;
   object-fit: cover;
 }
-.momentos .contenedor-video .bloque-momentos .p-momentos {
+.main .momentos .contenedor-video .bloque-momentos .p-momentos {
   color: aliceblue;
 }
-.momentos .contenedor-video .h3 {
+.main .momentos-nav {
+  background-color: rgb(12, 12, 12);
+  width: 100%;
+}
+.main .momentos-nav .barra-momentos {
   display: flex;
-  justify-content: end;
+  justify-content: center;
+}
+.main .momentos-nav .barra-momentos .container-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 30px;
+  background-color: black;
+  margin-top: 350px;
 }
 
 * {
