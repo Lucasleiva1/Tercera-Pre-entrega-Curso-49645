@@ -24,18 +24,16 @@ $color-tipografia: #008d00;
                 .h2-momentos {
                     display: flex;
                     align-items: center;
-                    width: 500px;
-                    height: 500px;
+                  width: 700px;
+                    -webkit-box-shadow: -6px 7px 4px 1px rgba(0, 0, 0, 0.45);-moz-box-shadow: -6px 7px 4px 1px rgba(0, 0, 0, 0.45);box-shadow: -6px 7px 4px 1px rgba(0, 0, 0, 0.45);
 
-                    .img-momentos {
-                        width: 450px;
-                    }
-
+                
                     h2 {
 
                         font-size: 80px;
                         color: aliceblue;
                         text-shadow: 8px 8px black;
+                        margin: 10px;
 
                     }
                 }
@@ -43,38 +41,44 @@ $color-tipografia: #008d00;
             }
 
         }
+        
 
         .contenedor-video {
             display: flex;
+            align-items: center;
+            margin-top: 50px;
 
             justify-content: center;
             perspective: 800px;
+            
 
             .bloque-momentos {
                 width: 300px;
                 height: 350px;
                 text-align: center;
                 margin: 30px;
-                border: 2px solid rgb(52, 50, 50);
+                /* border: 2px solid $color-tipografia; */
+                
                 -webkit-box-shadow: -8px 6px 7px 0px rgba(18, 17, 17, 0.76);
                 -moz-box-shadow: -8px 6px 7px 0px rgba(0, 0, 0, 0.76);
                 box-shadow: -8px 6px 7px 0px rgba(0, 0, 0, 0.76);
                 transform-style: preserve-3d;
                 /* transform: rotateY(50deg) rotateX(-2deg); */
+                
 
 
                 &:hover {
-                    scale: 1.1;
+                    scale: 1.2;
                     /* transform: rotateY(0deg) rotateX(-5deg) translateZ(180px); */
                     /* transition: 300ms ease-in;  */
                     transition: all 300ms ease-in-out;
-
                 }
 
                 .video-momentos {
                     width: 300px;
                     height: 250px;
                     object-fit: cover;
+                    
 
                 }
 
@@ -93,76 +97,111 @@ $color-tipografia: #008d00;
         border: 2px solid rgb(52, 50, 50);
         margin-top: 350px;
 
-        .container {
-            position: relative;
-            border: none;
-            background: transparent;
-            padding: 0;
-            cursor: pointer;
-            transition: filter 250ms;
-            margin: 5px;
-            
+        .barra-momentos {
+            background-color: black;
+
+
+            .container {
+                position: relative;
+                border: none;
+                background: transparent;
+                padding: 0;
+                cursor: pointer;
+                transition: filter 250ms;
+                margin: 5px;
+
+            }
+
+            .sombra {
+                position: absolute;
+                top: 0;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                border-radius: 5px;
+                /* background: hsla(146, 46%, 35%, 0.25); */
+                background-color: aliceblue;
+                /* transform: translateY(2px); */
+                transition: transform 600ms
+            }
+
+            .boton-a {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 5px;
+
+            }
+
+            .boton-b {
+                display: block;
+                position: relative;
+                padding: 12px 42px;
+                border-radius: 4px;
+                font-size: 1.25rem;
+                color: white;
+                background: hsl(0, 0%, 0%);
+                /* sube un poco el boton */
+                /* transform: translateY(-4px);   */
+
+                /* velocidad de vuelta */
+                transition: transform 600ms
+            }
+
+            .container:hover {
+                /* cambia color boton */
+                filter: brightness(110%);
+            }
+
+            .container:hover .boton-b {
+                /* desplazamiento arriba */
+                transform: translateY(-6px) translateX(-4px);
+                /* velocidad dezplazamiento */
+                transition: transform 250ms
+            }
+
+            /* efecto pulsar */
+            .container:active .boton-b {
+                transform: translateY(-2px);
+                transition: transform 34ms;
+            }
+
+            .p-momentos {
+                color: $color-tipografia;
+            }
+
         }
 
-        .sombra {
-            position: absolute;
-            top: 0;
-            left: 0px;
-            width: 100%;
-            height: 100%;
-            border-radius: 5px; 
-            /* background: hsla(146, 46%, 35%, 0.25); */
-            background-color: aliceblue;
-            /* transform: translateY(2px); */
-            transition: transform 600ms
+        .h3-centrar {
+            display: flex;
+            justify-content: center;
+
+            h3 {
+                color: aliceblue;
+                font-size: 30px;
+                margin: 5px;
+                text-shadow: 6px 6px black;
+            }
         }
 
-        .boton-a {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-             border-radius: 5px;
+        .container-animatrix {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            text-align: center;
 
+
+            .img-animatrix {
+                border: 2px solid black;
+                width: 250px;
+                height: 250px;
+            }
+            .p-animatrix{
+                color: antiquewhite;
+                margin: 5px;
+            }
         }
-
-        .boton-b {
-            display: block;
-            position: relative;
-            padding: 12px 42px;
-             border-radius: 4px; 
-            font-size: 1.25rem;
-            color: white;
-            background: hsl(0, 0%, 0%);
-            /* sube un poco el boton */
-            /* transform: translateY(-4px);   */
-
-            /* velocidad de vuelta */
-            transition: transform 600ms
-        }
-
-        .container:hover {
-            /* cambia color boton */
-            filter: brightness(110%);
-        }
-
-        .container:hover .boton-b {
-            /* desplazamiento arriba */
-            transform: translateY(-6px) translateX(-4px);
-            /* velocidad dezplazamiento */
-            transition: transform 250ms
-        }
-
-        /* efecto pulsar */
-        .container:active .boton-b {
-            transform: translateY(-2px) ;
-            transition: transform 34ms;
-        }
-
-   .p-momentos{
-    color: #008d00;
-   }
-
     }
 }

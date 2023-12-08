@@ -60,19 +60,21 @@ header .div-header .p-header {
 .main .momentos .contenedor-momentos .centrar-h2 .h2-momentos {
   display: flex;
   align-items: center;
-  width: 500px;
-  height: 500px;
-}
-.main .momentos .contenedor-momentos .centrar-h2 .h2-momentos .img-momentos {
-  width: 450px;
+  width: 700px;
+  -webkit-box-shadow: -6px 7px 4px 1px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: -6px 7px 4px 1px rgba(0, 0, 0, 0.45);
+  box-shadow: -6px 7px 4px 1px rgba(0, 0, 0, 0.45);
 }
 .main .momentos .contenedor-momentos .centrar-h2 .h2-momentos h2 {
   font-size: 80px;
   color: aliceblue;
   text-shadow: 8px 8px black;
+  margin: 10px;
 }
 .main .momentos .contenedor-video {
   display: flex;
+  align-items: center;
+  margin-top: 50px;
   justify-content: center;
   perspective: 800px;
 }
@@ -81,7 +83,7 @@ header .div-header .p-header {
   height: 350px;
   text-align: center;
   margin: 30px;
-  border: 2px solid rgb(52, 50, 50);
+  /* border: 2px solid $color-tipografia; */
   -webkit-box-shadow: -8px 6px 7px 0px rgba(18, 17, 17, 0.76);
   -moz-box-shadow: -8px 6px 7px 0px rgba(0, 0, 0, 0.76);
   box-shadow: -8px 6px 7px 0px rgba(0, 0, 0, 0.76);
@@ -89,7 +91,7 @@ header .div-header .p-header {
   /* transform: rotateY(50deg) rotateX(-2deg); */
 }
 .main .momentos .contenedor-video .bloque-momentos:hover {
-  scale: 1.1;
+  scale: 1.2;
   /* transform: rotateY(0deg) rotateX(-5deg) translateZ(180px); */
   /* transition: 300ms ease-in;  */
   transition: all 300ms ease-in-out;
@@ -107,9 +109,12 @@ header .div-header .p-header {
   width: 60%;
   border: 2px solid rgb(52, 50, 50);
   margin-top: 350px;
+}
+.main .momentos-nav .barra-momentos {
+  background-color: black;
   /* efecto pulsar */
 }
-.main .momentos-nav .container {
+.main .momentos-nav .barra-momentos .container {
   position: relative;
   border: none;
   background: transparent;
@@ -118,7 +123,7 @@ header .div-header .p-header {
   transition: filter 250ms;
   margin: 5px;
 }
-.main .momentos-nav .sombra {
+.main .momentos-nav .barra-momentos .sombra {
   position: absolute;
   top: 0;
   left: 0px;
@@ -130,7 +135,7 @@ header .div-header .p-header {
   /* transform: translateY(2px); */
   transition: transform 600ms;
 }
-.main .momentos-nav .boton-a {
+.main .momentos-nav .barra-momentos .boton-a {
   position: absolute;
   top: 0;
   left: 0;
@@ -138,7 +143,7 @@ header .div-header .p-header {
   height: 100%;
   border-radius: 5px;
 }
-.main .momentos-nav .boton-b {
+.main .momentos-nav .barra-momentos .boton-b {
   display: block;
   position: relative;
   padding: 12px 42px;
@@ -151,22 +156,47 @@ header .div-header .p-header {
   /* velocidad de vuelta */
   transition: transform 600ms;
 }
-.main .momentos-nav .container:hover {
+.main .momentos-nav .barra-momentos .container:hover {
   /* cambia color boton */
   filter: brightness(110%);
 }
-.main .momentos-nav .container:hover .boton-b {
+.main .momentos-nav .barra-momentos .container:hover .boton-b {
   /* desplazamiento arriba */
   transform: translateY(-6px) translateX(-4px);
   /* velocidad dezplazamiento */
   transition: transform 250ms;
 }
-.main .momentos-nav .container:active .boton-b {
+.main .momentos-nav .barra-momentos .container:active .boton-b {
   transform: translateY(-2px);
   transition: transform 34ms;
 }
-.main .momentos-nav .p-momentos {
+.main .momentos-nav .barra-momentos .p-momentos {
   color: #008d00;
+}
+.main .momentos-nav .h3-centrar {
+  display: flex;
+  justify-content: center;
+}
+.main .momentos-nav .h3-centrar h3 {
+  color: aliceblue;
+  font-size: 30px;
+  margin: 5px;
+  text-shadow: 6px 6px black;
+}
+.main .momentos-nav .container-animatrix {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  text-align: center;
+}
+.main .momentos-nav .container-animatrix .img-animatrix {
+  border: 2px solid black;
+  width: 250px;
+  height: 250px;
+}
+.main .momentos-nav .container-animatrix .p-animatrix {
+  color: antiquewhite;
+  margin: 5px;
 }
 
 * {
