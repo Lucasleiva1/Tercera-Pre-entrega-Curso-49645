@@ -1,0 +1,57 @@
+@import "partials/header";
+@import "partials/neo";
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+///////     MAIN      /////////
+
+
+main {
+
+    .fondo-main {
+        background-image: url(../img/neo/p1cb.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        width: 100%;
+        height: 970px;
+
+        .nav-main {
+            display: flex;
+            justify-content: end;
+
+            .a-main {
+                color: rgb(235, 238, 241);
+                margin: 10px;
+                text-decoration: none;
+                /* backdrop-filter: blur(2rem); */
+
+
+            }
+
+
+        }
+    }
+
+    .neo-main {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .img-neo {
+            padding: 150px 0 0 0;
+            width: 900px;
+            height: 650px;
+            
+
+        }
+
+     
+    }
+}

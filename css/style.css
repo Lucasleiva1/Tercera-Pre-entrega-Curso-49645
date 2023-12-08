@@ -1,4 +1,5 @@
 header {
+  scroll-snap-align: start;
   background-color: black;
   width: 100%;
   height: 970px;
@@ -48,10 +49,6 @@ header .div-header .p-header {
   height: 970px;
   background-color: rgb(12, 12, 12);
 }
-.main .momentos .contenedor-momentos {
-  /* width: 1200px; */
-  /*  border: 2px solid rgb(52, 50, 50); */
-}
 .main .momentos .contenedor-momentos .centrar-h2 {
   display: flex;
   align-items: center;
@@ -83,17 +80,13 @@ header .div-header .p-header {
   height: 350px;
   text-align: center;
   margin: 30px;
-  /* border: 2px solid $color-tipografia; */
   -webkit-box-shadow: -8px 6px 7px 0px rgba(18, 17, 17, 0.76);
   -moz-box-shadow: -8px 6px 7px 0px rgba(0, 0, 0, 0.76);
   box-shadow: -8px 6px 7px 0px rgba(0, 0, 0, 0.76);
   transform-style: preserve-3d;
-  /* transform: rotateY(50deg) rotateX(-2deg); */
 }
 .main .momentos .contenedor-video .bloque-momentos:hover {
   scale: 1.2;
-  /* transform: rotateY(0deg) rotateX(-5deg) translateZ(180px); */
-  /* transition: 300ms ease-in;  */
   transition: all 300ms ease-in-out;
 }
 .main .momentos .contenedor-video .bloque-momentos .video-momentos {
@@ -130,9 +123,158 @@ header .div-header .p-header {
   width: 100%;
   height: 100%;
   border-radius: 5px;
-  /* background: hsla(146, 46%, 35%, 0.25); */
   background-color: aliceblue;
-  /* transform: translateY(2px); */
+  transition: transform 600ms;
+}
+.main .momentos-nav .barra-momentos .boton-a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.main .momentos-nav .barra-momentos .boton-b {
+  display: block;
+  position: relative;
+  padding: 12px 42px;
+  border-radius: 4px;
+  font-size: 1.25rem;
+  color: white;
+  background: hsl(0, 0%, 0%);
+  /* sube un poco el boton */
+  /* transform: translateY(-4px);   */
+  /* velocidad de vuelta */
+  transition: transform 600ms;
+}
+.main .momentos-nav .barra-momentos .container:hover {
+  /* cambia color boton */
+  filter: brightness(110%);
+}
+.main .momentos-nav .barra-momentos .container:hover .boton-b {
+  /* desplazamiento arriba */
+  transform: translateY(-6px) translateX(-4px);
+  /* velocidad dezplazamiento */
+  transition: transform 250ms;
+}
+.main .momentos-nav .barra-momentos .container:active .boton-b {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+.main .momentos-nav .barra-momentos .p-momentos {
+  color: #008d00;
+}
+.main .momentos-nav .h3-centrar {
+  display: flex;
+  justify-content: center;
+}
+.main .momentos-nav .h3-centrar h3 {
+  color: aliceblue;
+  font-size: 30px;
+  margin: 5px;
+  text-shadow: 6px 6px black;
+}
+.main .momentos-nav .container-animatrix {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  text-align: center;
+}
+.main .momentos-nav .container-animatrix .img-animatrix {
+  border: 2px solid black;
+  width: 250px;
+  height: 250px;
+}
+.main .momentos-nav .container-animatrix .p-animatrix {
+  color: antiquewhite;
+  margin: 5px;
+}
+
+.main {
+  background-color: rgb(12, 12, 12);
+  display: flex;
+  justify-content: space-between;
+}
+.main .momentos {
+  width: 100%;
+  height: 970px;
+  background-color: rgb(12, 12, 12);
+}
+.main .momentos .contenedor-momentos .centrar-h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .momentos .contenedor-momentos .centrar-h2 .h2-momentos {
+  display: flex;
+  align-items: center;
+  width: 700px;
+  -webkit-box-shadow: -6px 7px 4px 1px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: -6px 7px 4px 1px rgba(0, 0, 0, 0.45);
+  box-shadow: -6px 7px 4px 1px rgba(0, 0, 0, 0.45);
+}
+.main .momentos .contenedor-momentos .centrar-h2 .h2-momentos h2 {
+  font-size: 80px;
+  color: aliceblue;
+  text-shadow: 8px 8px black;
+  margin: 10px;
+}
+.main .momentos .contenedor-video {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  justify-content: center;
+  perspective: 800px;
+}
+.main .momentos .contenedor-video .bloque-momentos {
+  width: 300px;
+  height: 350px;
+  text-align: center;
+  margin: 30px;
+  -webkit-box-shadow: -8px 6px 7px 0px rgba(18, 17, 17, 0.76);
+  -moz-box-shadow: -8px 6px 7px 0px rgba(0, 0, 0, 0.76);
+  box-shadow: -8px 6px 7px 0px rgba(0, 0, 0, 0.76);
+  transform-style: preserve-3d;
+}
+.main .momentos .contenedor-video .bloque-momentos:hover {
+  scale: 1.2;
+  transition: all 300ms ease-in-out;
+}
+.main .momentos .contenedor-video .bloque-momentos .video-momentos {
+  width: 300px;
+  height: 250px;
+  object-fit: cover;
+}
+.main .momentos .contenedor-video .bloque-momentos .p-momentos {
+  color: aliceblue;
+}
+.main .momentos-nav {
+  background-color: rgb(12, 12, 12);
+  width: 60%;
+  border: 2px solid rgb(52, 50, 50);
+  margin-top: 350px;
+}
+.main .momentos-nav .barra-momentos {
+  background-color: black;
+  /* efecto pulsar */
+}
+.main .momentos-nav .barra-momentos .container {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  transition: filter 250ms;
+  margin: 5px;
+}
+.main .momentos-nav .barra-momentos .sombra {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: aliceblue;
   transition: transform 600ms;
 }
 .main .momentos-nav .barra-momentos .boton-a {
@@ -204,30 +346,92 @@ header .div-header .p-header {
   padding: 0;
 }
 
-main .fondo-main {
+html {
+  scroll-snap-type: y mandatory;
+}
+html main .fondo-main {
   background-image: url(../img/neo/p1cb.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
   width: 100%;
   height: 970px;
+  scroll-snap-align: start;
 }
-main .fondo-main .nav-main {
+html main .fondo-main .nav-main {
   display: flex;
   justify-content: end;
 }
-main .fondo-main .nav-main .a-main {
+html main .fondo-main .nav-main .a-main {
   color: rgb(235, 238, 241);
   margin: 10px;
   text-decoration: none;
   /* backdrop-filter: blur(2rem); */
 }
-main .neo-main {
+html main .fondo-main .neo-main {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-main .neo-main .img-neo {
+html main .fondo-main .neo-main .img-neo {
+  padding: 150px 0 0 0;
+  width: 900px;
+  height: 650px;
+}
+html main .fondo-mtrinity {
+  background-image: url(../img/trinity/triniCortadafondo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  height: 970px;
+  scroll-snap-align: start;
+}
+html main .fondo-mtrinity .nav-main {
+  display: flex;
+  justify-content: end;
+}
+html main .fondo-mtrinity .nav-main .a-main {
+  color: rgb(235, 238, 241);
+  margin: 10px;
+  text-decoration: none;
+  /* backdrop-filter: blur(2rem); */
+}
+html main .fondo-mtrinity .neo-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html main .fondo-mtrinity .neo-main .img-trinity {
+  padding: 150px 0 0 0;
+  width: 900px;
+  height: 550px;
+}
+html main .fondo-morfeo {
+  background-image: url(../img/morfeo/morfondo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  height: 970px;
+  scroll-snap-align: start;
+}
+html main .fondo-morfeo .nav-main {
+  display: flex;
+  justify-content: end;
+}
+html main .fondo-morfeo .nav-main .a-main {
+  color: rgb(235, 238, 241);
+  margin: 10px;
+  text-decoration: none;
+  /* backdrop-filter: blur(2rem); */
+}
+html main .fondo-morfeo .neo-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html main .fondo-morfeo .neo-main .img-neo {
   padding: 150px 0 0 0;
   width: 900px;
   height: 650px;

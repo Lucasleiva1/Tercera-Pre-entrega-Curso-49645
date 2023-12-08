@@ -13,8 +13,7 @@ $color-tipografia: #008d00;
 
 
         .contenedor-momentos {
-            /* width: 1200px; */
-            /*  border: 2px solid rgb(52, 50, 50); */
+          
 
             .centrar-h2 {
                 display: flex;
@@ -57,20 +56,19 @@ $color-tipografia: #008d00;
                 height: 350px;
                 text-align: center;
                 margin: 30px;
-                /* border: 2px solid $color-tipografia; */
+                
                 
                 -webkit-box-shadow: -8px 6px 7px 0px rgba(18, 17, 17, 0.76);
                 -moz-box-shadow: -8px 6px 7px 0px rgba(0, 0, 0, 0.76);
                 box-shadow: -8px 6px 7px 0px rgba(0, 0, 0, 0.76);
                 transform-style: preserve-3d;
-                /* transform: rotateY(50deg) rotateX(-2deg); */
+                
                 
 
 
                 &:hover {
                     scale: 1.2;
-                    /* transform: rotateY(0deg) rotateX(-5deg) translateZ(180px); */
-                    /* transition: 300ms ease-in;  */
+                
                     transition: all 300ms ease-in-out;
                 }
 
@@ -119,9 +117,9 @@ $color-tipografia: #008d00;
                 width: 100%;
                 height: 100%;
                 border-radius: 5px;
-                /* background: hsla(146, 46%, 35%, 0.25); */
+                
                 background-color: aliceblue;
-                /* transform: translateY(2px); */
+               
                 transition: transform 600ms
             }
 
