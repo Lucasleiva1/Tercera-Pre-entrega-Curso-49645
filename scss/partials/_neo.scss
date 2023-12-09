@@ -1,38 +1,66 @@
 $color-tipografia: #008d00;
 
 
+
+
+@mixin tablet {
+    @media screen and (max-width: 1000px) {
+        @content;
+    }
+}
+
+
+
 .main {
     background-color: rgb(12, 12, 12);
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+
 
     .momentos {
         width: 100%;
-        height: 970px;
+
         background-color: rgb(12, 12, 12);
 
 
         .contenedor-momentos {
-          
+
 
             .centrar-h2 {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                @include tablet {
+                    display: flex;
+                    flex-direction: column;
+                }
+    
+
+                .flecha {
+                    margin: 0 200px 0 0;
+                    width: 100px;
+                    height: 100px;
+                }
 
                 .h2-momentos {
                     display: flex;
-                    align-items: center;
-                  width: 700px;
-                    -webkit-box-shadow: -6px 7px 4px 1px rgba(0, 0, 0, 0.45);-moz-box-shadow: -6px 7px 4px 1px rgba(0, 0, 0, 0.45);box-shadow: -6px 7px 4px 1px rgba(0, 0, 0, 0.45);
+                    align-items: center;                   
+                    -webkit-box-shadow: -6px 7px 4px 1px rgba(0, 0, 0, 0.45);
+                    -moz-box-shadow: -6px 7px 4px 1px rgba(0, 0, 0, 0.45);
+                    box-shadow: -6px 7px 4px 1px rgba(0, 0, 0, 0.45);
+                    
+                  
 
-                
+
                     h2 {
 
-                        font-size: 80px;
+                        font-size: 60px;
                         color: aliceblue;
                         text-shadow: 8px 8px black;
-                        margin: 10px;
+                        margin: 0px 100px 200px 0px; 
+                  
+        
 
                     }
                 }
@@ -40,7 +68,7 @@ $color-tipografia: #008d00;
             }
 
         }
-        
+
 
         .contenedor-video {
             display: flex;
@@ -48,27 +76,32 @@ $color-tipografia: #008d00;
             margin-top: 50px;
 
             justify-content: center;
-            perspective: 800px;
-            
+
+            @include tablet {
+                display: flex;
+                flex-direction: column;
+            }
+
+
 
             .bloque-momentos {
                 width: 300px;
                 height: 350px;
                 text-align: center;
                 margin: 30px;
-                
-                
+
+
                 -webkit-box-shadow: -8px 6px 7px 0px rgba(18, 17, 17, 0.76);
                 -moz-box-shadow: -8px 6px 7px 0px rgba(0, 0, 0, 0.76);
                 box-shadow: -8px 6px 7px 0px rgba(0, 0, 0, 0.76);
-                transform-style: preserve-3d;
-                
-                
+
+
+
 
 
                 &:hover {
                     scale: 1.2;
-                
+
                     transition: all 300ms ease-in-out;
                 }
 
@@ -76,7 +109,7 @@ $color-tipografia: #008d00;
                     width: 300px;
                     height: 250px;
                     object-fit: cover;
-                    
+
 
                 }
 
@@ -93,7 +126,7 @@ $color-tipografia: #008d00;
         background-color: rgb(12, 12, 12);
         width: 60%;
         border: 2px solid rgb(52, 50, 50);
-        margin-top: 350px;
+        margin: 100px;
 
         .barra-momentos {
             background-color: black;
@@ -117,9 +150,9 @@ $color-tipografia: #008d00;
                 width: 100%;
                 height: 100%;
                 border-radius: 5px;
-                
+
                 background-color: aliceblue;
-               
+
                 transition: transform 600ms
             }
 
@@ -186,9 +219,15 @@ $color-tipografia: #008d00;
 
         .container-animatrix {
             display: flex;
-            justify-content: end;
             align-items: center;
-            text-align: center;
+            -webkit-box-shadow: -8px 7px 5px 0px rgba(0, 0, 0, 0.45);
+            -moz-box-shadow: -8px 7px 5px 0px rgba(0, 0, 0, 0.45);
+            box-shadow: -8px 7px 5px 0px rgba(0, 0, 0, 0.45);
+            @include tablet {
+                display: flex;
+                flex-direction: column;
+            }
+
 
 
             .img-animatrix {
@@ -196,10 +235,13 @@ $color-tipografia: #008d00;
                 width: 250px;
                 height: 250px;
             }
-            .p-animatrix{
+
+            .p-animatrix {
                 color: antiquewhite;
                 margin: 5px;
             }
         }
     }
+
+
 }

@@ -1,157 +1,249 @@
 @import "partials/header";
-@import "partials/neo";
-@import "partials/trinity";
-@import "partials/morfeo";
+@import "./partials/neo";
+@import "./partials/trinity";
+@import "./partials/morfeo";
+
+@mixin tablet {
+    @media screen and (max-width: 1000px) {
+        @content;
+    }
+}
+
+@mixin movil {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+$color-tipografia: #008d00;
 
 
 * {
     margin: 0;
     padding: 0;
 }
-html{
-    scroll-snap-type: y mandatory;
-   
-///////     MAIN      /////////
 
-
-main {
+html {
    
 
 
-    .fondo-main {
-        background-image: url(../img/neo/p1cb.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        position: relative;
-        width: 100%;
-        height: 970px;
-        scroll-snap-align: start;
-        
 
-        .nav-main {
-            display: flex;
-            justify-content: end;
+    ///////     MAIN      /////////
 
-            .a-main {
-                color: rgb(235, 238, 241);
-                margin: 10px;
-                text-decoration: none;
-                /* backdrop-filter: blur(2rem); */
+
+    main {
+
+
+
+        .fondo-main {
+            background-image: url(../img/neo/p1cb.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            width: 100%;
+            height: 970px;
+            scroll-snap-align: start;
+
+
+            .nav-main {
+                display: flex;
+                justify-content: space-between;
+
+                .a-main {
+                    color: $color-tipografia;
+                    margin: 10px;
+                    text-decoration: none;
+
+
+
+
+                }
 
 
             }
 
 
+            .neo-main {
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+
+                .img-neo {
+
+                    width: 900px;
+                    height: 650px;
+                    margin-top: 100px;
+
+                    @include tablet {
+                        padding: 0;
+                        width: 500px;
+                        height: 300px;
+                    }
+
+                    @include movil {
+                        padding: 0;
+                        width: 400px;
+                        height: 250px;
+                    }
+
+                    @include phone {
+                        padding: 0;
+                        width: 300px;
+                        width: 200px;
+                    }
+
+
+                }
+
+
+
+            }
         }
-   
 
-    .neo-main {
+       
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-
-        .img-neo {
-            padding: 150px 0 0 0;
-            width: 900px;
-            height: 650px;
+        .fondo-mtrinity{
+            background-image: url(../img/trinity/triniCortadafondo.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            width: 100%;
+            height: 970px;
+            scroll-snap-align: start;
 
 
-        }
+            .nav-main {
+                display: flex;
+                justify-content: space-between;
+
+                .a-main {
+                    color: $color-tipografia;
+                    margin: 10px;
+                    text-decoration: none;
 
 
-    } 
-}
 
-    .fondo-mtrinity {
-        background-image: url(../img/trinity/triniCortadafondo.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        position: relative;
-        width: 100%;
-        height: 970px;
-        scroll-snap-align: start;
 
-        .nav-main {
-            display: flex;
-            justify-content: end;
-
-            .a-main {
-                color: rgb(235, 238, 241);
-                margin: 10px;
-                text-decoration: none;
-                /* backdrop-filter: blur(2rem); */
+                }
 
 
             }
 
 
+            .neo-main {
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+
+                .img-trinity {
+
+                    width: 900px;
+                    height: 650px;
+                    margin-top: 100px;
+
+                    @include tablet {
+                        padding: 0;
+                        width: 500px;
+                        height: 300px;
+                    }
+
+                    @include movil {
+                        padding: 0;
+                        width: 400px;
+                        height: 250px;
+                    }
+
+                    @include phone {
+                        padding: 0;
+                        width: 300px;
+                        width: 200px;
+                    }
+
+
+                }
+
+
+
+            }
         }
-    
 
-    .neo-main {
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .img-trinity {
-            padding: 150px 0 0 0;
-            width: 900px;
-             height: 550px; 
+        .fondo-morfeo {
+            background-image: url(../img/morfeo/morfondo.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            width: 100%;
+            height: 970px;
+            scroll-snap-align: start;
 
 
+            .nav-main {
+                display: flex;
+                justify-content: space-between;
+
+                .a-main {
+                    color: $color-tipografia;
+                    margin: 10px;
+                    text-decoration: none;
+
+
+
+
+                }
+
+
+            }
+
+
+            .neo-main {
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+
+                .img-morfeo {
+
+                    width: 900px;
+                    height: 650px;
+                    margin-top: 100px;
+
+                    @include tablet {
+                        padding: 0;
+                        width: 500px;
+                        height: 300px;
+                    }
+
+                    @include movil {
+                        padding: 0;
+                        width: 400px;
+                        height: 250px;
+                    }
+
+                    @include phone {
+                        padding: 0;
+                        width: 300px;
+                        width: 200px;
+                    }
+
+
+                }
+
+
+
+            }
         }
-
 
     }
-}
 
-
-    .fondo-morfeo {
-        background-image: url(../img/morfeo/morfondo.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        position: relative;
-        width: 100%;
-        height: 970px;
-        scroll-snap-align: start;
-
-        .nav-main {
-            display: flex;
-            justify-content: end;
-
-            .a-main {
-                color: rgb(235, 238, 241);
-                margin: 10px;
-                text-decoration: none;
-                /* backdrop-filter: blur(2rem); */
-
-
-            }
-
-
-        }
-    
-
-    .neo-main {
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .img-neo {
-            padding: 150px 0 0 0;
-            width: 900px;
-            height: 650px;
-
-
-        }
-
-
-    }
-
-}
-}
 }

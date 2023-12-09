@@ -8,10 +8,19 @@ header .nav-header {
   background-color: black;
   display: flex;
   justify-content: space-between;
-  position: relative;
+}
+@media screen and (max-width: 768px) {
+  header .nav-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 header .nav-header .a-nav {
+  text-transform: uppercase;
+  text-decoration: none;
   color: #008d00;
+  margin: 5px;
 }
 header .section-header {
   display: flex;
@@ -19,16 +28,42 @@ header .section-header {
   align-items: center;
   height: 920px;
   overflow: hidden;
+  position: relative;
 }
 header .section-header h1 {
-  padding: 0 0 0 0;
   font-size: 250px;
   color: aliceblue;
   position: absolute;
 }
+@media screen and (max-width: 768px) {
+  header .section-header h1 {
+    font-size: 150px;
+  }
+}
+@media screen and (max-width: 480px) {
+  header .section-header h1 {
+    font-size: 80px;
+  }
+}
 header .section-header .video-header {
   width: 700px;
   padding: 0 0 0 800px;
+}
+@media screen and (max-width: 1000px) {
+  header .section-header .video-header {
+    padding: 0 0 0 600px;
+    width: 500px;
+  }
+}
+@media screen and (max-width: 768px) {
+  header .section-header .video-header {
+    padding: 0 0 0 400px;
+  }
+}
+@media screen and (max-width: 480px) {
+  header .section-header .video-header {
+    padding: 0;
+  }
 }
 header .div-header {
   display: flex;
@@ -42,11 +77,11 @@ header .div-header .p-header {
 .main {
   background-color: rgb(12, 12, 12);
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
 .main .momentos {
   width: 100%;
-  height: 970px;
   background-color: rgb(12, 12, 12);
 }
 .main .momentos .contenedor-momentos .centrar-h2 {
@@ -54,26 +89,41 @@ header .div-header .p-header {
   align-items: center;
   justify-content: center;
 }
+@media screen and (max-width: 1000px) {
+  .main .momentos .contenedor-momentos .centrar-h2 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.main .momentos .contenedor-momentos .centrar-h2 .flecha {
+  margin: 0 200px 0 0;
+  width: 100px;
+  height: 100px;
+}
 .main .momentos .contenedor-momentos .centrar-h2 .h2-momentos {
   display: flex;
   align-items: center;
-  width: 700px;
   -webkit-box-shadow: -6px 7px 4px 1px rgba(0, 0, 0, 0.45);
   -moz-box-shadow: -6px 7px 4px 1px rgba(0, 0, 0, 0.45);
   box-shadow: -6px 7px 4px 1px rgba(0, 0, 0, 0.45);
 }
 .main .momentos .contenedor-momentos .centrar-h2 .h2-momentos h2 {
-  font-size: 80px;
+  font-size: 60px;
   color: aliceblue;
   text-shadow: 8px 8px black;
-  margin: 10px;
+  margin: 0px 100px 200px 0px;
 }
 .main .momentos .contenedor-video {
   display: flex;
   align-items: center;
   margin-top: 50px;
   justify-content: center;
-  perspective: 800px;
+}
+@media screen and (max-width: 1000px) {
+  .main .momentos .contenedor-video {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .main .momentos .contenedor-video .bloque-momentos {
   width: 300px;
@@ -83,7 +133,6 @@ header .div-header .p-header {
   -webkit-box-shadow: -8px 6px 7px 0px rgba(18, 17, 17, 0.76);
   -moz-box-shadow: -8px 6px 7px 0px rgba(0, 0, 0, 0.76);
   box-shadow: -8px 6px 7px 0px rgba(0, 0, 0, 0.76);
-  transform-style: preserve-3d;
 }
 .main .momentos .contenedor-video .bloque-momentos:hover {
   scale: 1.2;
@@ -101,7 +150,7 @@ header .div-header .p-header {
   background-color: rgb(12, 12, 12);
   width: 60%;
   border: 2px solid rgb(52, 50, 50);
-  margin-top: 350px;
+  margin: 100px;
 }
 .main .momentos-nav .barra-momentos {
   background-color: black;
@@ -176,9 +225,16 @@ header .div-header .p-header {
 }
 .main .momentos-nav .container-animatrix {
   display: flex;
-  justify-content: end;
   align-items: center;
-  text-align: center;
+  -webkit-box-shadow: -8px 7px 5px 0px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: -8px 7px 5px 0px rgba(0, 0, 0, 0.45);
+  box-shadow: -8px 7px 5px 0px rgba(0, 0, 0, 0.45);
+}
+@media screen and (max-width: 1000px) {
+  .main .momentos-nav .container-animatrix {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .main .momentos-nav .container-animatrix .img-animatrix {
   border: 2px solid black;
@@ -197,7 +253,6 @@ header .div-header .p-header {
 }
 .main .momentos {
   width: 100%;
-  height: 970px;
   background-color: rgb(12, 12, 12);
 }
 .main .momentos .contenedor-momentos .centrar-h2 {
@@ -205,26 +260,23 @@ header .div-header .p-header {
   align-items: center;
   justify-content: center;
 }
+.main .momentos .contenedor-momentos .centrar-h2 .flecha {
+  margin: 0 200px 0 0;
+  width: 100px;
+  height: 100px;
+}
 .main .momentos .contenedor-momentos .centrar-h2 .h2-momentos {
   display: flex;
   align-items: center;
-  width: 700px;
   -webkit-box-shadow: -6px 7px 4px 1px rgba(0, 0, 0, 0.45);
   -moz-box-shadow: -6px 7px 4px 1px rgba(0, 0, 0, 0.45);
   box-shadow: -6px 7px 4px 1px rgba(0, 0, 0, 0.45);
-}
-.main .momentos .contenedor-momentos .centrar-h2 .h2-momentos h2 {
-  font-size: 80px;
-  color: aliceblue;
-  text-shadow: 8px 8px black;
-  margin: 10px;
 }
 .main .momentos .contenedor-video {
   display: flex;
   align-items: center;
   margin-top: 50px;
   justify-content: center;
-  perspective: 800px;
 }
 .main .momentos .contenedor-video .bloque-momentos {
   width: 300px;
@@ -234,7 +286,6 @@ header .div-header .p-header {
   -webkit-box-shadow: -8px 6px 7px 0px rgba(18, 17, 17, 0.76);
   -moz-box-shadow: -8px 6px 7px 0px rgba(0, 0, 0, 0.76);
   box-shadow: -8px 6px 7px 0px rgba(0, 0, 0, 0.76);
-  transform-style: preserve-3d;
 }
 .main .momentos .contenedor-video .bloque-momentos:hover {
   scale: 1.2;
@@ -252,7 +303,6 @@ header .div-header .p-header {
   background-color: rgb(12, 12, 12);
   width: 60%;
   border: 2px solid rgb(52, 50, 50);
-  margin-top: 350px;
 }
 .main .momentos-nav .barra-momentos {
   background-color: black;
@@ -324,12 +374,6 @@ header .div-header .p-header {
   font-size: 30px;
   margin: 5px;
   text-shadow: 6px 6px black;
-}
-.main .momentos-nav .container-animatrix {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  text-align: center;
 }
 .main .momentos-nav .container-animatrix .img-animatrix {
   border: 2px solid black;
@@ -348,7 +392,6 @@ header .div-header .p-header {
 }
 .main .momentos {
   width: 100%;
-  height: 970px;
   background-color: rgb(12, 12, 12);
 }
 .main .momentos .contenedor-momentos .centrar-h2 {
@@ -356,26 +399,23 @@ header .div-header .p-header {
   align-items: center;
   justify-content: center;
 }
+.main .momentos .contenedor-momentos .centrar-h2 .flecha {
+  margin: 0 200px 0 0;
+  width: 100px;
+  height: 100px;
+}
 .main .momentos .contenedor-momentos .centrar-h2 .h2-momentos {
   display: flex;
   align-items: center;
-  width: 700px;
   -webkit-box-shadow: -6px 7px 4px 1px rgba(0, 0, 0, 0.45);
   -moz-box-shadow: -6px 7px 4px 1px rgba(0, 0, 0, 0.45);
   box-shadow: -6px 7px 4px 1px rgba(0, 0, 0, 0.45);
-}
-.main .momentos .contenedor-momentos .centrar-h2 .h2-momentos h2 {
-  font-size: 80px;
-  color: aliceblue;
-  text-shadow: 8px 8px black;
-  margin: 10px;
 }
 .main .momentos .contenedor-video {
   display: flex;
   align-items: center;
   margin-top: 50px;
   justify-content: center;
-  perspective: 800px;
 }
 .main .momentos .contenedor-video .bloque-momentos {
   width: 300px;
@@ -403,7 +443,6 @@ header .div-header .p-header {
   background-color: rgb(12, 12, 12);
   width: 60%;
   border: 2px solid rgb(52, 50, 50);
-  margin-top: 350px;
 }
 .main .momentos-nav .barra-momentos {
   background-color: black;
@@ -475,12 +514,6 @@ header .div-header .p-header {
   font-size: 30px;
   margin: 5px;
   text-shadow: 6px 6px black;
-}
-.main .momentos-nav .container-animatrix {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  text-align: center;
 }
 .main .momentos-nav .container-animatrix .img-animatrix {
   border: 2px solid black;
@@ -497,9 +530,6 @@ header .div-header .p-header {
   padding: 0;
 }
 
-html {
-  scroll-snap-type: y mandatory;
-}
 html main .fondo-main {
   background-image: url(../img/neo/p1cb.jpg);
   background-size: cover;
@@ -511,13 +541,12 @@ html main .fondo-main {
 }
 html main .fondo-main .nav-main {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
 }
 html main .fondo-main .nav-main .a-main {
-  color: rgb(235, 238, 241);
+  color: #008d00;
   margin: 10px;
   text-decoration: none;
-  /* backdrop-filter: blur(2rem); */
 }
 html main .fondo-main .neo-main {
   display: flex;
@@ -525,9 +554,30 @@ html main .fondo-main .neo-main {
   align-items: center;
 }
 html main .fondo-main .neo-main .img-neo {
-  padding: 150px 0 0 0;
   width: 900px;
   height: 650px;
+  margin-top: 100px;
+}
+@media screen and (max-width: 1000px) {
+  html main .fondo-main .neo-main .img-neo {
+    padding: 0;
+    width: 500px;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 768px) {
+  html main .fondo-main .neo-main .img-neo {
+    padding: 0;
+    width: 400px;
+    height: 250px;
+  }
+}
+@media screen and (max-width: 480px) {
+  html main .fondo-main .neo-main .img-neo {
+    padding: 0;
+    width: 300px;
+    width: 200px;
+  }
 }
 html main .fondo-mtrinity {
   background-image: url(../img/trinity/triniCortadafondo.jpg);
@@ -540,13 +590,12 @@ html main .fondo-mtrinity {
 }
 html main .fondo-mtrinity .nav-main {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
 }
 html main .fondo-mtrinity .nav-main .a-main {
-  color: rgb(235, 238, 241);
+  color: #008d00;
   margin: 10px;
   text-decoration: none;
-  /* backdrop-filter: blur(2rem); */
 }
 html main .fondo-mtrinity .neo-main {
   display: flex;
@@ -554,9 +603,30 @@ html main .fondo-mtrinity .neo-main {
   align-items: center;
 }
 html main .fondo-mtrinity .neo-main .img-trinity {
-  padding: 150px 0 0 0;
   width: 900px;
-  height: 550px;
+  height: 650px;
+  margin-top: 100px;
+}
+@media screen and (max-width: 1000px) {
+  html main .fondo-mtrinity .neo-main .img-trinity {
+    padding: 0;
+    width: 500px;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 768px) {
+  html main .fondo-mtrinity .neo-main .img-trinity {
+    padding: 0;
+    width: 400px;
+    height: 250px;
+  }
+}
+@media screen and (max-width: 480px) {
+  html main .fondo-mtrinity .neo-main .img-trinity {
+    padding: 0;
+    width: 300px;
+    width: 200px;
+  }
 }
 html main .fondo-morfeo {
   background-image: url(../img/morfeo/morfondo.jpg);
@@ -569,23 +639,43 @@ html main .fondo-morfeo {
 }
 html main .fondo-morfeo .nav-main {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
 }
 html main .fondo-morfeo .nav-main .a-main {
-  color: rgb(235, 238, 241);
+  color: #008d00;
   margin: 10px;
   text-decoration: none;
-  /* backdrop-filter: blur(2rem); */
 }
 html main .fondo-morfeo .neo-main {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-html main .fondo-morfeo .neo-main .img-neo {
-  padding: 150px 0 0 0;
+html main .fondo-morfeo .neo-main .img-morfeo {
   width: 900px;
   height: 650px;
+  margin-top: 100px;
+}
+@media screen and (max-width: 1000px) {
+  html main .fondo-morfeo .neo-main .img-morfeo {
+    padding: 0;
+    width: 500px;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 768px) {
+  html main .fondo-morfeo .neo-main .img-morfeo {
+    padding: 0;
+    width: 400px;
+    height: 250px;
+  }
+}
+@media screen and (max-width: 480px) {
+  html main .fondo-morfeo .neo-main .img-morfeo {
+    padding: 0;
+    width: 300px;
+    width: 200px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
