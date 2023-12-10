@@ -677,5 +677,13 @@ html main .fondo-morfeo .neo-main .img-morfeo {
     width: 200px;
   }
 }
+html main .flechaD {
+  width: 20px;
+  height: 20px;
+  margin: 0 0 0 8px;
+}
+html main .flechaD:hover {
+  scale: 1.2;
+}
 
 /*# sourceMappingURL=style.css.map */

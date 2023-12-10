@@ -30,7 +30,7 @@ $color-tipografia: #008d00;
 }
 
 html {
-   
+
 
 
 
@@ -108,9 +108,9 @@ html {
             }
         }
 
-       
 
-        .fondo-mtrinity{
+
+        .fondo-mtrinity {
             background-image: url(../img/trinity/triniCortadafondo.jpg);
             background-size: cover;
             background-repeat: no-repeat;
@@ -244,6 +244,14 @@ html {
             }
         }
 
+        .flechaD {
+            width: 20px;
+            height: 20px;
+            margin: 0 0 0 8px;
+            &:hover{
+                scale: 1.2;
+            }
+        }
     }
 
 }
